@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Shop - متجر الدونات</title>
+    <!-- استدعاء خط فخم من Google Fonts لعنوان المتجر -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images.jpg">
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي الفخم -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Donut Shop 🍩</h1>
+        </div>
+
+        <nav>
+            <ul class="info-bar">
+                <li class="all"><a href="index.html">Home</a></li>
+                <li class="all"><a href="info.html">Info</a></li>
+                <li class="all"><a href="card.html" id="cart-link">Card 🛒 (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- شريط البحث -->
+    <div class="search-box"> 
+        <input type="text" id="search-input" placeholder="Search For A Donut..." class="search-input">
+        <button type="button" class="search-btn">🔍</button>
+    </div>
+
+    <!-- قائمة المنتجات (تم جمع الـ 8 منتجات هنا بداخلها بشكل مرتب) -->
+    <main class="products-container" id="products-list">
+        <!-- المنتج الأول -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="10.jpg" alt="Sugar Donut">
+            </div>
+            <div class="product-info">
+                <h3>Sugar Donut</h3>
+                <p class="price">Price: 10$</p>
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <span class="qty-number">1</span>
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                    <button class="button-one">Add to card</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج الثاني -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="20.jpg" alt="Pink Donut">
+            </div>
+            <div class="product-info">
+                <h3>Pink Donut</h3>
+                <p class="price">Price: 12$</p>
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <span class="qty-number">1</span>
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                    <button class="button-one">Add to card</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج الثالث -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="30.jpg" alt="Yellow Donut">
+            </div>
+            <div class="product-info">
+                <h3>Yellow Donut</h3>
+                <p class="price">Price: 13$</p>
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <span class="qty-number">1</span>
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                    <button class="button-one">Add to card</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج الرابع -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="40.jpg" alt="Dark Donut">
+            </div>
+            <div class="product-info">
+                <h3>Dark Donut</h3>
+                <p class="price">Price: 50$</p>
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <span class="qty-number">1</span>
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                    <button class="button-one">Add to card</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج الخامس (جديد) -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="pic/blue.jpg" alt="Choco Donut">
+            </div>
+            <div class="product-info">
+                <h3>Choco Donut</h3>
+                <p class="price">Price: 15$</p>
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <span class="qty-number">1</span>
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                    <button class="button-one">Add to card</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج السادس (جديد) -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="pic/dark.jpg" alt="Strawberry Donut">
+            </div>
+            <div class="product-info">
+                <h3>Strawberry Donut</h3>
+                <p class="price">Price: 14$</p>
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <span class="qty-number">1</span>
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                    <button class="button-one">Add to card</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج السابع (جديد) -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="pic/orange.jpg" alt="Caramel Donut">
+            </div>
+            <div class="product-info">
+                <h3>Caramel Donut</h3>
+                <p class="price">Price: 16$</p>
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <span class="qty-number">1</span>
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                    <button class="button-one">Add to card</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج الثامن (جديد) -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="pic/red.jpg" alt="Special Donut">
+            </div>
+            <div class="product-info">
+                <h3>Special Donut</h3>
+                <p class="price">Price: 20$</p>
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button type="button" class="qty-btn minus">-</button>
+                        <span class="qty-number">1</span>
+                        <button type="button" class="qty-btn plus">+</button>
+                    </div>
+                    <button class="button-one">Add to card</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem("donutCart")) || [];
+
+        // تحديث عداد السلة في الأعلى
+        function updateCartCount() {
+            const cartLink = document.getElementById("cart-link");
+            if (cartLink) {
+                cartLink.innerText = `Card 🛒 (${cart.length})`;
+            }
+        }
+        updateCartCount();
+
+        // --- 1. التحكم في أزرار الزيادة (+) والنقصان (-) لكل بطاقة ---
+        document.querySelectorAll(".product-card").forEach(card => {
+            const minusBtn = card.querySelector(".minus");
+            const plusBtn = card.querySelector(".plus");
+            const qtySpan = card.querySelector(".qty-number");
+
+            plusBtn.addEventListener("click", () => {
+                let currentQty = parseInt(qtySpan.innerText);
+                qtySpan.innerText = currentQty + 1;
+            });
+
+            minusBtn.addEventListener("click", () => {
+                let currentQty = parseInt(qtySpan.innerText);
+                if (currentQty > 1) {
+                    qtySpan.innerText = currentQty - 1;
+                }
+            });
+        });
+
+        // --- 2. إضافة الكمية المحددة إلى السلة ---
+        const buttons = document.querySelectorAll(".button-one");
+        buttons.forEach(button => {
+            button.addEventListener("click", function() {
+                const card = this.closest(".product-card");
+                const name = card.querySelector("h3").innerText;
+                const priceText = card.querySelector(".price").innerText;
+                const price = parseFloat(priceText.replace(/[^0-9.]/g, ""));
+                const image = card.querySelector("img").getAttribute("src");
+                const quantity = parseInt(card.querySelector(".qty-number").innerText);
+
+                // إضافة المنتج بعدد الحبات المختارة
+                for (let i = 0; i < quantity; i++) {
+                    cart.push({ name, price, image });
+                }
+
+                localStorage.setItem("donutCart", JSON.stringify(cart));
+                updateCartCount();
+
+                // إعادة العداد إلى 1 بعد الإضافة
+                card.querySelector(".qty-number").innerText = "1";
+
+                alert(`تمت إضافة (${quantity}) من ${name} إلى السلة!`);
+            });
+        });
+
+        // --- 3. البحث الفوري (Live Search) ---
+        const searchInput = document.getElementById("search-input");
+        const productCards = document.querySelectorAll(".product-card");
+
+        searchInput.addEventListener("input", function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+
+            productCards.forEach(card => {
+                const productName = card.querySelector("h3").innerText.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

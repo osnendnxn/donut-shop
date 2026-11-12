@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سلة المشتريات - Donut Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cart-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .cart-item img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .remove-btn {
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .total-box {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #555;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cart-container">
+        <h2>🛒 سلة المشتريات (Card)</h2>
+        <div id="cart-items"></div>
+        <div class="total-box" id="total-price">المجموع الكلي: 0$</div>
+        <a href="index.html" class="back-btn">العودة للمتجر</a>
+    </div>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem("donutCart")) || [];
+            const container = document.getElementById("cart-items");
+            const totalElement = document.getElementById("total-price");
+            
+            container.innerHTML = "";
+            let total = 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = "<p>السلة فارغة حالياً.</p>";
+                totalElement.innerText = "المجموع الكلي: 0$";
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                container.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <h3>${item.name}</h3>
+                        <p>${item.price}$</p>
+                        <button class="remove-btn" onclick="removeItem(${index})">حذف</button>
+                    </div>
+                `;
+            });
+
+            totalElement.innerText = "المجموع الكلي: " + total + "$";
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem("donutCart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("donutCart", JSON.stringify(cart));
+            loadCart();
+        }
+
+        // تشغيل الدالة عند فتح الصفحة
+        loadCart();
+    </script>
+
+</body>
+</html>
